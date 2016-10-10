@@ -15,13 +15,14 @@ var createIdea = function() {
       success: function(idea) {
         appendIdea(idea);
         clearTextFileds();
+        removeIdea();
       }
     });
   });
 };
 
 function appendIdea(idea) {
-  $(".ideas").prepend(`<tr><td>${idea.title}</td><td>${idea.body}</td><td>${idea.quality}</td></tr>`);
+  $(".ideas").prepend(`<tr><td>${idea.title}</td><td>${idea.body}</td><td>${idea.quality}</td><td><button class="remove" id="idea_<%= idea.id %>">● <p style="display:none">remove</p></button></td></tr>`);
 }
 
 function clearTextFileds() {

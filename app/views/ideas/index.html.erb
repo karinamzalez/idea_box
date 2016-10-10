@@ -14,6 +14,9 @@
           <td><%= idea.title %></td>
           <td><%= limit_body(idea.body) %></td>
           <td><%= idea.quality %></td>
+          <td>
+            <button class="remove" data-id="<%= idea.id %>">● <p style="display:none">remove</p></button>
+          </td>
         </tr>
       <% end %>
     </tbody>
