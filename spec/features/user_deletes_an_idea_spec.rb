@@ -6,7 +6,11 @@ RSpec.feature "user visits root and deletes idea", js: true do
 
     visit "/"
 
-    within ".idea_1"
-      click_on
+    within "#idea_1"
+      click_on "● "
+    end
+
+    expect(page).to_not have_content(idea.title)
+    expect(page).to_not have_content(idea.body)
   end
 end
