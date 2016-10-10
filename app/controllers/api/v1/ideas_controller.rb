@@ -15,6 +15,12 @@ class Api::V1::IdeasController < ApplicationController
     render json: @idea
   end
 
+  def quality_up
+    @idea = Idea.find(params[:id])
+    @idea.increase_quality
+    render json: @idea
+  end
+
 private
 
   def idea_params
