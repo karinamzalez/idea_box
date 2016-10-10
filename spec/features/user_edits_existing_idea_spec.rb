@@ -7,8 +7,7 @@ RSpec.feature "user visits root and edits idea", js: true do
     visit "/"
 
     within("tr:nth-child(2)") do
-      click_on('mango')
-      
+
     end
   end
 end
