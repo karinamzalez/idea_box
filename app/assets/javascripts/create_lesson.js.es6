@@ -24,7 +24,7 @@ var createIdea = function() {
 };
 
 function appendIdea(idea) {
-  $(".ideas").prepend(`<tr id="idea_${idea.id}"><td class="edit-title" data-id="${idea.id}">${idea.title}</td><td class="edit-body" data-id="${idea.id}">${idea.body}</td><td class="quality"><button class="quality-down qual" data-id="${idea.id}">◀︎</button>${idea.quality}<button class="quality-up qual" data-id="${idea.id}">▶︎</button></td><td><button class="remove" id="idea_${idea.id}">● <p style="display:none">remove</p></button></td></tr>`);
+  $(".ideas").prepend(`<tr id="idea_${idea.id}"><td class="edit-title" id="edit-title-${idea.id}">${idea.title}</td><td class="edit-bod" id="edit-body-${idea.id} data-id="${idea.id}">${idea.body}</td><td class="quality"><button class="quality-down qual" data-id="${idea.id}">◀︎</button>${idea.quality}<button class="quality-up qual" data-id="${idea.id}">▶︎</button></td><td><button class="remove" id="idea_${idea.id}">● <p style="display:none">remove</p></button></td></tr>`);
 }
 
 function clearTextFileds() {

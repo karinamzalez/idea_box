@@ -41,5 +41,5 @@ var downvoteQuality = function() {
 function updateQuality(idea){
   $(`#idea_${idea.id}`).empty();
   var row = $(`#idea_${idea.id}`)[0];
-   $(`<td class="edit-title" data-id="${idea.id}">${idea.title}</td><td class="edit-body" data-id="${idea.id}">${idea.body}</td><td class="quality"><button class="quality-down qual" data-id="${idea.id}">◀︎</button>${idea.quality}<button class="quality-up qual" data-id="${idea.id}">▶︎</button></td><td><button class="remove" id="idea_${idea.id}">● <p style="display:none">remove</p></button></td>`).appendTo(row);
+   $(`<td class="edit-title" id="edit-title-${idea.id}">${idea.title}</td><td class="edit-bod" id="edit-body-${idea.id} data-id="${idea.id}">${idea.body}</td><td class="quality"><button class="quality-down qual" data-id="${idea.id}">◀︎</button>${idea.quality}<button class="quality-up qual" data-id="${idea.id}">▶︎</button></td><td><button class="remove" id="idea_${idea.id}">● <p style="display:none">remove</p></button></td>`).appendTo(row);
 }
