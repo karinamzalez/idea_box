@@ -9,6 +9,12 @@ class Api::V1::IdeasController < ApplicationController
     end
   end
 
+  def delete
+    idea = Idea.find(params[:id])
+    @idea = idea.delete
+    render json: @idea
+  end
+
 private
 
   def idea_params

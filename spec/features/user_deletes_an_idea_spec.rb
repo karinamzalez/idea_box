@@ -1,12 +1,13 @@
 require 'rails_helper'
 
 RSpec.feature "user visits root and deletes idea", js: true do
+  fixtures :ideas
   scenario "user clicks 'x' and removes idea" do
-    idea = ideas(:one)
+    idea = ideas(:two)
 
     visit "/"
 
-    within "#idea_1"
+    within("tr:nth-child(2)") do
       click_on "● "
     end
 

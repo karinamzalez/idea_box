@@ -5,7 +5,7 @@ $(document).ready(function () {
 
 var deleteIdea = function() {
   $(".remove").on("click", function(e) {
-    button = e.target;
+    var button = e.target;
     var id = button.getAttribute("data-id");
     $.ajax({
       method: "DELETE",
@@ -18,3 +18,9 @@ var deleteIdea = function() {
     });
   });
 };
+
+function removeIdea(idea) {
+  if(idea) {
+    $(`#idea_${idea.id}`).toggle();
+  }
+}

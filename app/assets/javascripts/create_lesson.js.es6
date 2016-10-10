@@ -15,7 +15,7 @@ var createIdea = function() {
       success: function(idea) {
         appendIdea(idea);
         clearTextFileds();
-        removeIdea();
+        deleteIdea();
       }
     });
   });
