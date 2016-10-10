@@ -16,13 +16,15 @@ var createIdea = function() {
         appendIdea(idea);
         clearTextFileds();
         deleteIdea();
+        upvoteQuality();
+        downvoteQuality();
       }
     });
   });
 };
 
 function appendIdea(idea) {
-  $(".ideas").prepend(`<tr><td>${idea.title}</td><td>${idea.body}</td><td>${idea.quality}</td><td><button class="remove" id="idea_<%= idea.id %>">● <p style="display:none">remove</p></button></td></tr>`);
+  $(".ideas").prepend(`<tr id="idea_${idea.id}"><td>${idea.title}</td><td>${idea.body}</td><td class="quality"><button class="quality-down qual" data-id="${idea.id}">◀︎</button>${idea.quality}<button class="quality-up qual" data-id="${idea.id}">▶︎</button></td><td><button class="remove" id="idea_${idea.id}">● <p style="display:none">remove</p></button></td></tr>`);
 }
 
 function clearTextFileds() {

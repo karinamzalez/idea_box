@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 $(document).ready(function () {
   upvoteQuality();
+  downvoteQuality();
 });
 
 var upvoteQuality = function() {
@@ -13,6 +14,25 @@ var upvoteQuality = function() {
       dataType: "json",
       success: function(idea) {
         updateQuality(idea);
+        upvoteQuality();
+        downvoteQuality();
+      }
+    });
+  });
+};
+
+var downvoteQuality = function() {
+  $(".quality-down").on("click", function(e) {
+    var button = e.target;
+    var id = button.getAttribute('data-id');
+    $.ajax({
+      method: "PATCH",
+      url: "/api/v1/ideas/quality-down/" + id,
+      dataType: "json",
+      success: function(idea) {
+        updateQuality(idea);
+        upvoteQuality();
+        downvoteQuality();
       }
     });
   });

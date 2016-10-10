@@ -7,12 +7,16 @@ RSpec.feature "user visits root//changes quality", js: true do
 
     within(".ideas") do
       within('tr:nth-child(1)') do
-        expect(page).to have_content("swill")
+          expect(page).to have_content("swill")
         click_on('◀︎')
-        expect(page).to have_content("swill")
+          expect(page).to have_content("swill")
         click_on('▶︎')
-        expect(page).to have_content("plausible")
-        expect(page).to_not have_content("swill")
+          expect(page).to have_content("plausible")
+          expect(page).to_not have_content("swill")
+        click_on('▶︎')
+          expect(page).to have_content("genius")
+        click_on('◀︎')
+          expect(page).to have_content("plausible")
       end
     end
   end

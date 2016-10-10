@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       post   "/ideas",       to: "ideas#create"
       delete "/ideas/:id",   to: "ideas#delete"
       patch  "/ideas/quality-up/:id", to: "ideas#quality_up"
+      patch  "/ideas/quality-down/:id", to: "ideas#quality_down"
     end
   end
 end
