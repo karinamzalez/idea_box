@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 $(document).ready(function () {
   createIdea();
 });
@@ -13,8 +14,17 @@ var createIdea = function() {
       dataType: "json",
       success: function(idea) {
         appendIdea(idea);
-        clearTextFiled();
+        clearTextFileds();
       }
     });
   });
 };
+
+function appendIdea(idea) {
+  $(".ideas").append(`<tr><td>${idea.title}</td><td>${idea.body}</td><td>${idea.quality}</td></tr>`);
+}
+
+function clearTextFileds() {
+  $('#title').val('');
+  $('#body').val('');
+}

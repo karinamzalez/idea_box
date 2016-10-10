@@ -1,5 +1,5 @@
 <div class="title">sɐǝpl</div>
-<div class="circle ideas">
+<div class="circle">
   <table>
     <thead>
       <tr>
@@ -8,7 +8,7 @@
         <th>Quality</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="ideas">
       <% @ideas.all.each do |idea| %>
         <tr data-id="idea_<%= idea.id %>">
           <td><%= idea.title %></td>
