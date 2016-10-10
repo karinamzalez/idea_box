@@ -21,7 +21,7 @@ var createIdea = function() {
 };
 
 function appendIdea(idea) {
-  $(".ideas").append(`<tr><td>${idea.title}</td><td>${idea.body}</td><td>${idea.quality}</td></tr>`);
+  $(".ideas").prepend(`<tr><td>${idea.title}</td><td>${idea.body}</td><td>${idea.quality}</td></tr>`);
 }
 
 function clearTextFileds() {
