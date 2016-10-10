@@ -9,41 +9,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>blah</td>
-        <td>fwee</td>
-        <td>spoon</td>
-      </tr>
-      <tr>
-        <td>blah</td>
-        <td>fwee</td>
-        <td>spoon</td>
-      </tr>
-      <tr>
-        <td>blah</td>
-        <td>fwee</td>
-        <td>spoon</td>
-      </tr>
-      <tr>
-        <td>blah</td>
-        <td>fwee</td>
-        <td>spoon</td>
-      </tr>
-      <tr>
-        <td>blah</td>
-        <td>fwee</td>
-        <td>spoon</td>
-      </tr>
-      <tr>
-        <td>blah</td>
-        <td>fwee</td>
-        <td>spoon</td>
-      </tr>
-      <tr>
-        <td>blah</td>
-        <td>fwee</td>
-        <td>spoon</td>
-      </tr>
+      <% @ideas.each do |idea| %>
+        <tr data-id="idea_<%= idea.id %>">
+          <td><%= idea.title %></td>
+          <td><%= idea.body %></td>
+          <td><%= idea.quality %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
 </div>
