@@ -9,7 +9,8 @@ gem 'coffee-rails', '~> 4.2'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
-
+gem 'sprockets', '>= 3.0.0'
+gem 'sprockets-es6'
 
 group :development, :test do
   gem 'byebug', platform: :mri

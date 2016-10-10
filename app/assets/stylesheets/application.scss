@@ -14,6 +14,10 @@
  *= require_self
 
  */
+ body {
+   margin-left: 200px;
+   margin-right: 100px;
+ }
  .circle {
    background-color: #87b7b8;
    border-radius: 50%;
@@ -22,6 +26,18 @@
    min-height: 400px;
    float: right;
    overflow: scroll !important;
+}
+
+.new-idea {
+  background-color: #87b7b8;
+  font-family: Sans-serif;
+  border-radius: 50%;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  height: 200px;
+  width: 200px;
+  -webkit-font-smoothing: antialiased !important;
 }
 
 .title {
@@ -45,14 +61,6 @@
    font-family: Sans-serif;
    -webkit-font-smoothing: antialiased !important;
  }
-//
-//  thead, tbody { display: block; }
-//
-//  tbody {
-//     height: 500px;
-//     width: 200px;
-//     overflow: auto;
-// }
 
  td {
    border-top: solid white 1px;

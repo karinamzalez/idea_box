@@ -1,5 +1,5 @@
 <div class="title">sɐǝpl</div>
-<div class="circle ideas">
+<div class="circle">
   <table>
     <thead>
       <tr>
@@ -8,7 +8,7 @@
         <th>Quality</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="ideas">
       <% @ideas.all.each do |idea| %>
         <tr data-id="idea_<%= idea.id %>">
           <td><%= idea.title %></td>
@@ -19,6 +19,20 @@
     </tbody>
   </table>
 </div>
-<!-- <div class="ideas">
 
-</div> -->
+<div class="new-idea">
+  <br>
+  <br>
+  <%= label_tag(:title, "title: ") %>
+  <br>
+  <%= text_field_tag(:title, "", id: "title") %>
+  <br>
+  <br>
+  <%= label_tag(:body, "body: ") %>
+  <br>
+  <%= text_field_tag(:body, "", id: "body") %>
+  <input type="hidden" name="date" id="lesson_date">
+  <br>
+  <br>
+  <%= submit_tag("Save", id: "create_lesson") %>
+</div>
