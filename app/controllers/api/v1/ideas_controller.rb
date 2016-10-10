@@ -27,6 +27,18 @@ class Api::V1::IdeasController < ApplicationController
     render json: @idea
   end
 
+  def update_title
+    @idea = Idea.find(params[:id])
+    @idea.update_attribute("title", params[:title])
+    render json: @idea
+  end
+
+  def update_body
+    @idea = Idea.find(params[:id])
+    @idea.update_attribute("body", params[:body])
+    render json: @idea
+  end
+
 private
 
   def idea_params
