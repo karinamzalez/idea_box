@@ -19,6 +19,19 @@
     </tbody>
   </table>
 </div>
-<!-- <div class="ideas">
 
-</div> -->
+<div class="new-idea">
+  <br>
+  <br>
+  <%= label_tag(:title, "title: ") %>
+  <br>
+  <%= text_field_tag(:title, "", id: "title") %>
+  <br>
+  <br>
+  <%= label_tag(:body, "description: ") %>
+  <%= text_field_tag(:body, "", id: "body") %>
+  <input type="hidden" name="date" id="lesson_date">
+  <br>
+  <br>
+  <%= submit_tag("Save", id: "create_lesson") %>
+</div>
