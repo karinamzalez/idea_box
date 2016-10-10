@@ -1,11 +1,16 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  body: MyString
-  quality: MyString
+  title: ephemeral
+  body: Who, if I cried out, would hear me among the angels- hierarchies? and even if one of them suddenly pressed me against his heart, I would perish in the embrace of his stronger existence.
+  quality: chillin
 
 two:
-  title: MyString
-  body: MyString
-  quality: MyString
+  title: On Beauty
+  body: For beauty is nothing but the beginning of terror which we are barely able to endure and are awed because it serenely disdains to annihilate us.
+  quality: still chillin
+
+three:
+  title: Lou Salome
+  body: Poetry is something in-between the dream and its interpretation.
+  quality: also chillin
